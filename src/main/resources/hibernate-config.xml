@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database Settings -->
+
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/joctopus7</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">root</property>
+
+        <!-- hibernate Settings -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="cache.use_second_level_cache">true</property>
+        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+
+
+
+
+        <!-- Mapping information -->
+        <mapping class="com.HibernateBasicPrograms.Student"/>
+        <mapping class="com.OneToOne.Faculty"/>
+        <mapping class="com.OneToOne.Address"/>
+        <mapping class="com.OneToMany.College"/>
+        <mapping class="com.OneToMany.Course"/>
+        <mapping class="com.HQL.Product"/>
+        <mapping class="com.NamedQuery.Employee"/>
+        <mapping class="com.cache.Employee1"/>
+
+    </session-factory>
+</hibernate-configuration>
+
